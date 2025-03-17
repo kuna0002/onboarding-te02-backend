@@ -1,0 +1,46 @@
+server:
+  port: 443
+  ssl:
+    key-store: classpath:sunbuddyapi.p12
+    key-store-password: sunbuddyjava
+    key-store-type: PKCS12
+    key-alias: sunbuddyapi_ssl_certificate
+    enabled: true
+
+spring:
+  application:
+    name: sunbuddy
+  datasource:
+    url: jdbc:mysql://database-1.cjue8q2ayvjr.ap-southeast-2.rds.amazonaws.com:3306/onboarding-db
+    username: admin
+    password: test1234
+  jpa:
+    open-in-view: false
+    show-sql: false
+    ddl-auto: none
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    datasource:
+      initialize: false
+  main:
+    allow-circular-references: false
+
+open-meteo:
+  api:
+    url: https://api.open-meteo.com/v1/forecast
+
+logging:
+  level:
+    org:
+      springframework:
+        web: INFO
+  file:
+    path: ./logs/${spring.application.name}
+    name: ${logging.file.path}/app.log
+
+
+
+
+
+
+

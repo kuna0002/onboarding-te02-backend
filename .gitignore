@@ -1,17 +1,59 @@
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://github.com/takari/maven-wrapper#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
 
-# Eclipse m2e generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
+### Ignore logs ###
+logs/
+*.log
+**/logs/
+**/*.log
+
+### Ignore compiled classes ###
+target/
+build/
+bin/
+
+### Ignore dependency caches ###
+.mvn/
+.gradle/
+**/node_modules/
+!gradle/wrapper/gradle-wrapper.jar
+
+### Ignore temporary files ###
+*.swp
+*.swo
+*.DS_Store
+*.class
+*.war
+*.jar
+*.ear
+
+### Ignore database files ###
+*.h2.db
+*.mv.db
+*.sql
+*.sqlite
+
+### Ignore Spring Boot properties ###
+.env
+application.properties
+application.yml
+application-dev.properties
+application-prod.properties
+
+### Ignore OS files ###
+*.bak
+Thumbs.db
+.DS_Store
+._*
+
+### Ignore Java test reports ###
+surefire-reports/
+test-output/
+
+### Ignore JetBrains Rider ###
+.idea/
+*.sln.iml
